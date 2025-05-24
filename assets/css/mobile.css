@@ -3,8 +3,9 @@
     html,body,*{
         padding: 0;
         margin: 0;
-        box-sizing: border-box;
+        box-sizing: border-box!important;
         font-size: 12px;
+        scroll-behavior: smooth!important;
     }
     .container{
         position: relative;
@@ -135,6 +136,16 @@ height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(
+      to left,
+      rgba(2, 78, 67, 0.838),
+      rgba(0, 0, 0, 0.925)
+    ),
+    url("../images/dentist-doing-check-up-patient.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
     height: 50%;
     padding: 2rem;
@@ -181,6 +192,10 @@ height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+ }
+ .contents>.contents-right>.read-more{
+    width: 50%;
+
  }
 }
 @media (max-width: 767px) {
