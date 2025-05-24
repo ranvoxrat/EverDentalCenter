@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+   padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style-type:none;
+    text-decoration: none;
+    color:white;
+    scroll-behavior: smooth;
+}
+
+html,body{
+    position: relative;
+    display: block;
+    content: "";
+    clear: both;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+      to left,
+      rgba(2, 97, 78, 0.834),
+      rgb(0, 0, 0)
+    ),
+    url("../images/full-equiped-medical-cabinet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+    padding: 1.5rem 4rem;
+}
+header {
+  position: relative;
+  display: block;
+  content: "";
+  clear: both;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu-toggle {
+  display: none; /* hidden by default */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001; /* above nav-menu */
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  padding: 0 4rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #06755d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 0 4rem;
+  height: 80px;
+  width: 100%;
+}
+
+nav > span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: poppins;
+  font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+}
+
+nav > span > img {
+  width: 7%;
+}
+
+nav > ul {
+  position: relative;
+  display: flex;
+  content: "";
+  clear: both;
+  gap: 1rem;
+}
+
+nav > ul > li > a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+nav > ul > li > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+nav > ul > li > a:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+nav > ul > li > a:hover {
+  color: #f7f7f7;
+}
+
+.header-content{
+    position: relative;
+    display: flex;
+    justify-self: unset;
+    content: "";
+    clear: both;
+    width: 100%;
+    height: 100vh;
+    padding-top: 10vh;
+}
+.header-content>.header-content-left{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-left: 4rem;
+}
+.header-content>img{
+    width: 80%;
+    height: 80%;
+}
+.text-2{
+    font-family: poppins;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.text-1{
+    font-family: poppins;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #05f866;
+}
+.text-p{
+    font-family: poppins;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.button-group{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+.button-group>.btn-explore,.btn-book{
+    position: relative;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: transparent;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.642);
+    padding: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.button-group>.btn-explore:hover,.btn-book:hover{
+    background-image: linear-gradient(to right,#045d51,#07eb84);
+    color: white;
+    border: none;
+    box-shadow:none;
+    transform: scale(1.1);
+}
+.service {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 6.5rem;
+    background-color: white;
+}
+.service-header{
+    text-align: center;
+}
+.service-header h1 {
+    font-size: 2.5rem;
+    color: #004d26;
+    font-weight: bold;
+}
+.service-header h2 {
+    font-size: 1.5rem;
+    color: #676767;
+    font-weight: bold;
+}
+.service-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+.service-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service-card {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid #00c291;
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #004d26;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.25rem;
+}
+.contents{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    clear: both;
+    background-image: linear-gradient(
+      to left,
+      rgba(2, 97, 78, 0.834),
+      rgba(0, 0, 0, 0.925)
+    ),
+    url("../images/care.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding: 1.5rem 4rem;
+    width: 100%;
+    height: 100vh;
+}
+.contents>img{
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+    margin: 4rem;
+}
+.contents-right{
+    position: relative;
+    display: content;
+    height:auto;
+}
+.contents-right>h1{
+    font-family: poppins;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.contents-right>p{
+    font-family: poppins;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-emphasis: 200px;
+}
+.contents-right>button{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 0.5rem;
+    background-color: transparent;
+    box-shadow: 1px 1px 5px rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+.contents-right>button:hover{
+    background-color: rgb(2, 89, 47);
+    transform: scale(1.1);
+}
+.about{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+.about-left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+     background-image: linear-gradient(
+      to left,
+      rgba(2, 78, 67, 0.838),
+      rgba(0, 0, 0, 0.925)
+    ),
+    url("../images/dentist-doing-check-up-patient.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    padding-left:8rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    width: 50%;
+    height: 100vh;
+}
+.about-left>h1{
+    font-family: poppins;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 4.5rem;
+}
+.about-left>p{
+    font-family: poppins;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-emphasis: 200px;
+    text-align: start;
+    margin-top: 2rem;
+}
+.about>.about-right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    width:50%;
+    padding: 1.5rem 4rem;
+}
+.about-header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.parent-line{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.parent-line>h1{
+    font-family: poppins;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(3, 77, 71);
+}
+.about-right>.about-header>p{
+    text-align: start;
+    font-family: poppins;
+    font-size: large;
+    font-weight: 300;
+    color: rgb(3, 37, 30);
+}
+.line{
+    position:absolute;
+    bottom: 0rem;
+    left:0rem;
+    width: 5rem;
+    height: 9px;
+    
+    background-color: rgb(4, 103, 75);
+}
+
+.cta-section {
+  position: relative;
+ background-image: linear-gradient(
+      to left,
+      rgba(2, 78, 67, 0.838),
+      rgba(0, 0, 0, 0.925)
+    ),
+    url("../images/dentist-doing-check-up-patient.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  padding: 0;
+ 
+}
+
+.cta-container {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  flex: 1 1 50%;
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #00401e;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 20%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.cta-button i {
+  margin-right: 0.5rem;
+}
+.cta-button:hover {
+  background-color: #006a3a;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.blogs {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   width: 100%;
+   height: 100vh;
+   padding:4rem;
+   background-color: #ffffff;
+}
+
+.blogs-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blogs-header h2 {
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.blogs-header h1 {
+  font-size: 2.5rem;
+  color: #004d26;
+}
+
+.blogs-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blogs-card {
+  flex: 1;
+  max-width: 410px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blogs-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #004d26;
+}
+
+.card-body p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  color: #006a3a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+.contactUs {
+  padding: 4rem 2rem;
+  background-image: linear-gradient(
+      to left,
+      rgba(2, 78, 67, 0.838),
+      rgba(0, 0, 0, 0.925)
+    ),
+    url("../images/dentist-doing-check-up-patient.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.contact-details {
+  flex: 1 1 45%;
+}
+
+.contact-details h2 {
+  font-size: 2rem;
+  color: #004d26;
+  margin-bottom: 1rem;
+}
+
+.contact-details p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+.info-item>span{
+  color: black;
+}
+.info-item i {
+  color: #007c4d;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.google-map {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: #004d26;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007c4d;
+}
+
+.contact-form button {
+  background-color: #007c4d;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button i {
+  margin-right: 8px;
+}
+
+.contact-form button:hover {
+  background-color: #005a36;
+}
+
+/* Basic reset and layout */
+.site-footer {
+  background-color: #06755d;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 50px;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer__brand {
+  flex: 1 1 250px;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footer__logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer__description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer__schedule {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer__schedule-icon ion-icon {
+  font-size: 20px;
+  color: #00d4ff;
+}
+
+.footer__schedule-text {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Footer Lists */
+.footer__list {
+  flex: 1 1 180px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__list-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer__link ion-icon {
+  margin-right: 8px;
+  color: #00d4ff;
+}
+
+.footer__link:hover {
+  color: #00d4ff;
+}
+
+/* Contact Info */
+.footer__contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.footer__icon {
+  margin-right: 10px;
+  color: #00d4ff;
+  font-size: 20px;
+}
+
+.footer__text {
+  font-style: normal;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Footer Bottom */
+.footer__bottom {
+  background-color: #024128;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.footer__copyright {
+  font-size: 13px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__social-link {
+  color: #ccc;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+  color: #00d4ff;
+}
+
