@@ -33,10 +33,19 @@
    nav{
         position: relative;
         display: flex;
+        justify-content: space-between;
+        align-content: center;
         align-items: center;
         width: 100vw;
    }
- 
+  header>nav>span>img{
+      width: 2rem;
+  }
+   header>nav>.menu-toggle>ion-icon{
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: rgb(255, 255, 255);
+   }
   .menu-toggle {
     position: relative;
     display: block;
@@ -78,11 +87,13 @@
     content: "";
     clear: both;
     width: 100%;
-    margin:0 auto!important;
+    margin:0!important;
     padding: 0!important;
   }
   .header-content>img{
-    width: 50%;
+   padding-top: 0!important;
+   margin-top: 0!important;
+    width: 100%;
     height: 40%;
   }
   .header-content-left{
@@ -160,6 +171,30 @@ height: auto;
     content: "";
     clear: both;
  }
+ .about-header>.parent-line>h1{
+   font-size: 1.9rem;
+ }
+ .about-header>.parent-line>.line{
+   position:absolute;
+   width: 45%;
+   top:30px;
+   left: 0;
+   background-color: orange;
+ }
+ .about-right>.about-header>p{
+   font-family: poppins;
+   font-size: 1.2rem;
+   color: rgb(41, 41, 41);
+ }
+ .about-left>h1{
+   font-size: 1.8rem;
+ }
+ .about-left>p{
+   text-align: center;
+ }
+ .cta-title{
+   text-align: center;
+ }
  .cta-section{
     position: relative;
     display: block;
@@ -193,11 +228,88 @@ height: auto;
     flex-direction: column;
     justify-content: center;
  }
+ .contents>.contents-right>h1{
+    font-size: 1.8rem;
+ }
  .contents>.contents-right>.read-more{
     width: 50%;
+    color:white
+
+ }
+ .contactUs{
+   position: relative;
+   display: flex;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+ }
+  .contactUs>.contact-wrapper{
+   position: relative;
+   display: flex;
+   content: "";
+   clear: both;
+   padding:2rem 4rem;
+ }
+ .contact-details{
+   position: relative;
+   width: 100%!important;
+   padding: 0;
+   margin: 0;
+   /* background-color: orange; */
+ }
+ .contactUs>.contact-wrapper>.contact-details>h1{
+   font-family: poppins;
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: white;
+ }
+ .contactUs>.contact-wrapper>.contact-details>p{
+   font-family: poppins;
+   font-size: 1rem;
+   color: rgb(207, 206, 206);
+ }
+ .contactUs>.contact-wrapper>.contact-details>.info-item>span{
+   font-family: poppins;
+   font-size: 1rem;
+   color: rgb(243, 241, 241);
+ }
+ .contactUs>.contact-wrapper>.contact-details>.info-item>ion-icon{
+   font-size: 2rem;
+   padding: 8px;
+ }
+ .google-map{
+   width: 100%;
+ }
+ .contact-form>h3{
+   font-family: poppins;
+   font-size: 1.8rem;
+   color: white;
 
  }
 }
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .btn-modal-submit {
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}
+/* Adjust columns at breakpoints */
+@media (min-width: 600px) {
+  .form-col {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+@media (min-width: 900px) {
+  .form-col {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
 @media (max-width: 767px) {
   
 

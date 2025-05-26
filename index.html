@@ -194,7 +194,7 @@
     <div class="about">
         <div class="about-left">
             <h1>About Us</h1>
-           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eum placeat dolorem quas sunt fuga dicta soluta vero cupiditate distinctio nobis corrupti aut, perferendis aperiam, reprehenderit quia, sequi ea voluptatem?</q></p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eum placeat dolorem quas sunt fuga dicta soluta vero cupiditate distinctio nobis corrupti aut, perferendis aperiam, reprehenderit quia, sequi ea voluptatem?</q></p>
         </div>
         <div class="about-right">
           <div class="about-header">
@@ -202,14 +202,14 @@
                 <h1>Mission</h1>
                 <span class="line"></span>
               </span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi sapiente nobis, sunt repellat reprehenderit quibusdam illum id quis earum, quam voluptates cumque excepturi consequuntur corporis consequatur veniam. Ut, iure consectetur!</p>
+            <p>To build long-term relationships with patients by providing exceptional dental care rooted in honesty, ethics, and compassion.</p>
           </div>
            <div class="about-header">
              <span class="parent-line">
                 <h1>Vision</h1>
                 <span class="line"></span>
               </span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi sapiente nobis, sunt repellat reprehenderit quibusdam illum id quis earum, quam voluptates cumque excepturi consequuntur corporis consequatur veniam. Ut, iure consectetur!</p>
+            <p>To become the most trusted dental clinic in the Philippines, known for delivering superior quality care that prioritizes dental aesthetics, durable restorations, and high-standard services.</p>
           </div>
         </div>
     </div>   
@@ -217,7 +217,12 @@
   <div class="cta-container">
     <div class="cta-text">
       <p class="cta-subtitle">Book Dental Appointment Now!</p>
-      <h2 class="cta-title">We are open and welcoming patients.</h2>
+   <h2 class="cta-title">
+  <span style="font-size: 2rem; color: #ccc;">❝</span>
+  We are open and welcoming patients
+  <span style="font-size: 2rem; color: #ccc;">❞</span>
+</h2>
+
       <a href="#" class="cta-button" id="openModalBtn"><ion-icon name="calendar-outline"></ion-icon> Book an Appointment</a>
     </div>
   </div>
@@ -274,29 +279,25 @@
 </div>
 <section class="contactUs">
   <div class="contact-wrapper">
-    
     <div class="contact-details">
-      <h2>Contact Us</h2>
+      <h1>Contact Us</h1>
       <p>We’d love to hear from you! Please reach out with any questions, concerns, or appointment requests.</p>
 
       <div class="info-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>123 Smile Street, Dental City, DNT 4567</span>
+        <ion-icon name="map-outline"></ion-icon>
+        <span>#2 Vicente Cordero street Marulas, Valenzuela City</span>
       </div>
       <div class="info-item">
-        <i class="fas fa-phone"></i>
-        <span>+63 912 345 6789</span>
+        <ion-icon name="call-outline"></ion-icon>
+        <span>(0921-307-2577) or (0956-098-3080)</span>
       </div>
       <div class="info-item">
-        <i class="fas fa-envelope"></i>
-        <span>hello@dentalsmile.com</span>
+        <ion-icon name="mail-outline"></ion-icon>
+        <span>everdentalcenter@gmail.com</span>
       </div>
 
       <div class="google-map">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.001637081786!2d121.05371061537064!3d14.589334480182932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90df2e5d21d%3A0x9e4349b7959c86fa!2sDental%20Clinic!5e0!3m2!1sen!2sph!4v1615413585731!5m2!1sen!2sph" 
-          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1174.3537439643055!2d120.97905229168038!3d14.679732550928634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b41bba070ae1%3A0x8a14377434c5add0!2s2%20Vicente%20Cordero%20St%2C%20Valenzuela%2C%201440%20Metro%20Manila!5e1!3m2!1sen!2sph!4v1748229041996!5m2!1sen!2sph" width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
@@ -388,8 +389,99 @@
       </ul>
     </div>
   </div>
-
+ 
 </footer>
+        <div id="appointmentModal" class="modal" style="display:none;">
+            <div class="modal-content">
+              <div class="modal-header">
+              
+                <h2><ion-icon name="calendar-outline"></ion-icon> Book an Appointment</h2>  
+                  <span class="close" id="closeModalBtn">&times;</span>         
+              </div>
+            <p>Please input your valid information below to book your appointment.</p>
+            <form id="appointmentForm">
+              
+                <div class="form-group row">
+                  <div class="form-col">
+                    <label for="firstname">Firstname<span class="askterisk">*</span></label>
+                    <input type="text" id="firstname" placeholder="Enter Firstname" name="firstname" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="middlename">Middlename<span class="askterisk">*</span></label>
+                    <input type="text" id="middlename" name="middlename" placeholder="Enter Middlename">
+                  </div>
+                  <div class="form-col">
+                    <label for="lastname">Lastname<span class="askterisk">*</span></label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Enter Lastname" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="form-col">
+                    <label for="email">Email<span class="askterisk">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="Contact No.">Contact No.<span class="askterisk">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Contact Number" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="form-col">
+                     <label for="address">Address<span class="askterisk">*</span></label>
+                      <input type="text" id="address" name="address" placeholder="Enter Address">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="form-col">
+                    <label for="date">Preferred Date<span class="askterisk">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                  </div>
+ 
+                  <div class="form-col">
+                      <label for="time_slot">Preferred Time Slot<span class="askterisk">*</span></label>
+                      <select id="time_slot" name="time_slot" required>
+                        <option value="" selected disabled>Select time slot</option>
+                        <option value="0">10am-11am</option>
+                        <option value="1">11am-12pm</option>
+                        <option value="2">12pm-1pm</option>
+                        <option value="3">1pm-2pm</option>
+                        <option value="4">2pm-3pm</option>
+                        <option value="5">3pm-4pm</option>
+                        <option value="6">4pm-5pm</option>
+                      </select>
+                </div>
+              </div>
+               <div class="form-group row">
+                <div class="form-col">
+                    <label for="service">Service<span class="askterisk">*</span></label>
+                    <select id="service" name="service" required>
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="1">Adjustment</option>
+                      <option value="2">Consult</option>
+                      <option value="3">Dentures/Veneers/Bridge</option>
+                      <option value="4">Extraction (Bunot)</option>
+                      <option value="5">Frenectomy</option>
+                      <option value="6">Gingivectomy</option>
+                      <option value="7">New Ortho/Braces</option>
+                      <option value="8">Oral Prophylaxis (Cleaning)</option>
+                      <option value="9">RB/Wire</option>
+                      <option value="10">Resto (Pasta)</option>
+                      <option value="11">Surgery</option>
+                      <option value="12">TADS</option>
+                      <option value="13">Whitening</option>
+                      <option value="0">Others</option>
+                    </select>
+                   
+                  </div>
+                  <button type="submit" class="btn-modal-submit"><ion-icon name="checkmark-outline"></ion-icon>Submit</button>
+                  </div>
+                   
+            </form>
+          </div>
+        </div>
 <script>
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -406,7 +498,25 @@
     nav.classList.toggle("sticky", window.scrollY > 0);
   });
 </script>
-
+<script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('appointmentModal');
+            var openBtn = document.getElementById('openModalBtn');
+            var closeBtn = document.getElementById('closeModalBtn');
+            openBtn.onclick = function(e) {
+              e.preventDefault();
+              modal.style.display = 'flex';
+            };
+            closeBtn.onclick = function() {
+              modal.style.display = 'none';
+            };
+            window.onclick = function(event) {
+              if (event.target == modal) {
+          modal.style.display = 'none';
+              }
+            };
+          });
+        </script>
   </body>
 </html>
 
