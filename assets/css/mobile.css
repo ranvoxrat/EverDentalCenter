@@ -9,6 +9,7 @@
         font-size: 12px;
         scroll-behavior: smooth!important;
     }
+    
     .container{
         position: relative;
         display: block;
@@ -235,14 +236,14 @@ height: auto;
  }
  .contents>.contents-right>.read-more{
     width: 50%;
-    color:white
-
+    color:white;
  }
  .contactUs{
    position: relative;
    display: flex;
    width: 100%;
    padding: 0;
+   border-radius: none;
    margin: 0;
  }
   .contactUs>.contact-wrapper{
@@ -250,13 +251,15 @@ height: auto;
    display: flex;
    content: "";
    clear: both;
-   padding:2rem 4rem;
+   padding:2rem;
+   /* background-color: rgb(44, 33, 12); */
  }
  .contact-details{
    position: relative;
    width: 100%!important;
    padding: 0;
    margin: 0;
+   
    /* background-color: orange; */
  }
  .contactUs>.contact-wrapper>.contact-details>h1{
@@ -288,6 +291,7 @@ height: auto;
    color: white;
 
  }
+ 
 }
 
 @media (max-width: 480px) {
