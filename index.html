@@ -229,8 +229,7 @@
   We are open and welcoming patients
   <span style="font-size: 2rem; color: #ccc;">❞</span>
 </h2>
-
-      <a href="#" class="cta-button" id="openModalBtn"><ion-icon name="calendar-outline"></ion-icon> Book an Appointment</a>
+      <a href="#" class="btn-book" id="openModalBtn1"><ion-icon name="calendar-outline"></ion-icon>Book an Appointment</a>
     </div>
   </div>
 </div>
@@ -292,16 +291,16 @@
 
       <div class="info-item">
         <ion-icon name="map-outline"></ion-icon>
-        <span>#2 Vicente Cordero street Marulas, Valenzuela City</span>
+        <span>#2 Vicente Cordero street, Brgy. Marulas, Valenzuela City, Philippines</span>
       </div>
       <div class="info-item">
         <ion-icon name="call-outline"></ion-icon>
-        <span>(0921-307-2577) or (0956-098-3080)</span>
+        <span>0921-307-2577<br>0956-098-3080</span>
       </div>
-      <div class="info-item">
+      <!-- <div class="info-item">
         <ion-icon name="mail-outline"></ion-icon>
         <span>everdentalcenter@gmail.com</span>
-      </div>
+      </div> -->
 
       <div class="google-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1174.3537439643055!2d120.97905229168038!3d14.679732550928634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b41bba070ae1%3A0x8a14377434c5add0!2s2%20Vicente%20Cordero%20St%2C%20Valenzuela%2C%201440%20Metro%20Manila!5e1!3m2!1sen!2sph!4v1748229041996!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -314,7 +313,8 @@
       <input type="email" placeholder="Email Address" required>
       <input type="text" placeholder="Subject" required>
       <textarea placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      <button type="submit"><ion-icon name="checkmark-sharp"></ion-icon>
+ Send Message</button>
     </form>
 
   </div>
@@ -368,18 +368,18 @@
         <li class="footer__contact-item">
           <div class="footer__icon"><ion-icon name="location-outline"></ion-icon></div>
           <address class="footer__text">
-            1234/Plot No. 56, 10th Avenue,<br>
-            Makati City, Philippines
+            #2 Vicente Cordero Street, Brgy. Marulas, <br>
+            Valenzuela City, Philippines
           </address>
         </li>
         <li class="footer__contact-item">
           <div class="footer__icon"><ion-icon name="call-outline"></ion-icon></div>
-          <a href="tel:+917052101786" class="footer__link">+91-7052-101-786</a>
+          <span>0921-307-2577<br>0956-0983080</span>
         </li>
-        <li class="footer__contact-item">
+        <!-- <li class="footer__contact-item">
           <div class="footer__icon"><ion-icon name="mail-outline"></ion-icon></div>
           <a href="mailto:everdentalcenter@gmail.com" class="footer__link">everdentalcenter@gmail.com</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -480,18 +480,12 @@
                       <option value="12">TADS</option>
                       <option value="13">Whitening</option>
                       <option value="0">Others</option>
-                    </select>
-                   
+                    </select>                 
                   </div>
-                 <!-- New Patient Checkbox -->
-                    <div class="form-group row">
-                      <input class="form-check-input" type="checkbox" id="newPatient" name="new_patient">
-                      <label class="form-check-label" for="newPatient">
-                        Are you a new patient?
-                      </label>
+                    <div class="form-group-box">
+                      <input type="checkbox" id="newPatient" name="new_patient">
+                      <label class="form-check-label" for="newPatient">Are you a new patient?</label>
                     </div>
-
-                    <!-- Source Dropdown - initially hidden -->
                     <div class="form-group row" id="referralGroup" style="display: none;">
                       <label for="referralSource">
                         Where did you find out about DGT One Dental Center? <span class="text-danger">*</span>
@@ -502,9 +496,115 @@
                         <option>Instagram</option>
                         <option>Tiktok</option>
                         <option>DGT Patient Referral</option>
-                        <option>Colleene Ferrer</option>
-                        <option>@cruzdianem</option>
-                        <option>@alizaannebaronia</option>
+                      </select>
+                    </div>
+
+                   
+
+                  <button type="submit" class="btn-modal-submit"><ion-icon name="checkmark-outline"></ion-icon>Submit</button>
+                  </div>
+                   
+            </form>
+          </div>
+        </div>
+        <div id="appointmentModal1" class="modal" style="display:none;">
+            <div class="modal-content">
+              <div class="modal-header">
+              
+                <h2><ion-icon name="calendar-outline"></ion-icon> Book an Appointment</h2>  
+                  <span class="close" id="closeModalBtn1">&times;</span>         
+              </div>
+            <p>Please input your valid information below to book your appointment.</p>
+            <form id="appointmentForm">
+              
+                <div class="form-group row">
+                  <div class="form-col">
+                    <label for="firstname">First Name<span class="askterisk">*</span></label>
+                    <input type="text" id="firstname" placeholder="Enter Firstname" name="firstname" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="middlename">Middle Initial<span class="askterisk">*</span></label>
+                    <input type="text" id="middlename" name="middlename" placeholder="Enter Middlename">
+                  </div>
+                  <div class="form-col">
+                    <label for="lastname">Last Name<span class="askterisk">*</span></label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Enter Lastname" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="form-col">
+                    <label for="email">Email<span class="askterisk">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="Contact No.">Contact No.<span class="askterisk">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Contact Number" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="form-col">
+                     <label for="address">Address<span class="askterisk">*</span></label>
+                      <input type="text" id="address" name="address" placeholder="Enter Address">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="form-col">
+                    <label for="date">Preferred Date<span class="askterisk">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                  </div>
+ 
+                  <div class="form-col">
+                      <label for="time_slot">Preferred Time Slot<span class="askterisk">*</span></label>
+                      <select id="time_slot" name="time_slot" required>
+                        <option value="" selected disabled>Select time slot</option>
+                        <option value="0">10am-11am</option>
+                        <option value="1">11am-12pm</option>
+                        <option value="2">12pm-1pm</option>
+                        <option value="3">1pm-2pm</option>
+                        <option value="4">2pm-3pm</option>
+                        <option value="5">3pm-4pm</option>
+                        <option value="6">4pm-5pm</option>
+                      </select>
+                </div>
+              </div>
+               <div class="form-group row">
+                <div class="form-col">
+                    <label for="service">Service<span class="askterisk">*</span></label>
+                    <select id="service" name="service" required>
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="1">Adjustment</option>
+                      <option value="2">Consult</option>
+                      <option value="3">Dentures/Veneers/Bridge</option>
+                      <option value="4">Extraction (Bunot)</option>
+                      <option value="5">Frenectomy</option>
+                      <option value="6">Gingivectomy</option>
+                      <option value="7">New Ortho/Braces</option>
+                      <option value="8">Oral Prophylaxis (Cleaning)</option>
+                      <option value="9">RB/Wire</option>
+                      <option value="10">Resto (Pasta)</option>
+                      <option value="11">Surgery</option>
+                      <option value="12">TADS</option>
+                      <option value="13">Whitening</option>
+                      <option value="0">Others</option>
+                    </select>                 
+                  </div>
+                    <div class="form-group-box">
+                      <input type="checkbox" id="newPatient1" name="new_patient1">
+                      <label class="form-check-label" for="newPatient">Are you a new patient?</label>
+                    </div>
+                    <div class="form-group row" id="referralGroup1" style="display: none;">
+                      <label for="referralSource">
+                        Where did you find out about DGT One Dental Center? <span class="text-danger">*</span>
+                      </label>
+                      <select class="form-control" id="referralSource1" name="referral_source">
+                        <option value="" disabled selected>Select one</option>
+                        <option>Facebook</option>
+                        <option>Instagram</option>
+                        <option>Tiktok</option>
+                        <option>DGT Patient Referral</option>
                       </select>
                     </div>
 
@@ -545,11 +645,38 @@
                         referralGroup.style.display = this.checked ? 'block' : 'none';
                       });
                     </script>
+                     <script>
+                      const newPatientCheckbox1= document.getElementById('newPatient1');
+                      const referralGroup1 = document.getElementById('referralGroup1');
+
+                      newPatientCheckbox1.addEventListener('change', function () {
+                        referralGroup1.style.display = this.checked ? 'block' : 'none';
+                      });
+                    </script>
 <script>
           document.addEventListener('DOMContentLoaded', function() {
             var modal = document.getElementById('appointmentModal');
             var openBtn = document.getElementById('openModalBtn');
             var closeBtn = document.getElementById('closeModalBtn');
+            openBtn.onclick = function(e) {
+              e.preventDefault();
+              modal.style.display = 'flex';
+            };
+            closeBtn.onclick = function() {
+              modal.style.display = 'none';
+            };
+            window.onclick = function(event) {
+              if (event.target == modal) {
+          modal.style.display = 'none';
+              }
+            };
+          });
+        </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('appointmentModal1');
+            var openBtn = document.getElementById('openModalBtn1');
+            var closeBtn = document.getElementById('closeModalBtn1');
             openBtn.onclick = function(e) {
               e.preventDefault();
               modal.style.display = 'flex';
