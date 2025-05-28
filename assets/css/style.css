@@ -39,10 +39,6 @@ html,body{
 }
 
 body {
-    position: relative;
-    display: content;
-    content: "";
-    clear: both;
     color: white;
 }
 
@@ -69,7 +65,7 @@ body {
 }
 header {
   position: relative;
-  display: block;
+  display: content;
   content: "";
   clear: both;
   width: 100%;
