@@ -317,9 +317,19 @@ input::placeholder {
   padding: 1rem;
   gap: 2px;
 }
+#referralSource1 option,#referralSource option{
+  color:black;
+  width: 100%;
+}
+.contact-wrapper {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  background-color: none;
+}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) {  
   .modal-content {
     padding: 1rem;
   }
@@ -328,6 +338,12 @@ input::placeholder {
     font-size: 0.95rem;
     width: 100%;
   }
+  .contact-wrapper {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  background-color: none;
+}
 }
 /* Adjust columns at breakpoints */
 @media (min-width: 600px) {

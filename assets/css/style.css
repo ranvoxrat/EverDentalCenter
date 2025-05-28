@@ -575,14 +575,18 @@ nav > ul > li > a:hover {
 }
 
 .read-more {
-  color: #006a3a;
+  color: #f7f7f7;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 0.95rem;
+   transition: all 0.3s ease-in-out;
 }
-
-.read-more:hover {
-  text-decoration: underline;
+.read-more:hover{
+    background-image: linear-gradient(to right,#045d51,#07eb84);
+    color: white;
+    border: none;
+    box-shadow:none;
+    transform: scale(1.1)
 }
 .contactUs {
   padding: 4rem 2rem;
@@ -600,7 +604,10 @@ nav > ul > li > a:hover {
 }
 
 .contact-wrapper {
+  position: relative;
   display: flex;
+  flex-direction: row;
+  /* background-color: orange; */
   flex-wrap: wrap;
   gap: 3rem;
   max-width: 1200px;
@@ -611,7 +618,40 @@ nav > ul > li > a:hover {
 }
 
 .contact-details {
-  flex: 1 1 45%;
+  flex: 1;
+}
+.google-map {
+  flex: 1;
+  /* margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+}
+
+.contact-wrapper>.contact-details>h1{
+  font-family:poppins;
+  font-size:2rem;
+  font-weight: 600;
+  
+}
+.contact-wrapper>.contact-details>p{
+  font-family:poppins;
+  font-size:1rem;
+  font-weight: 300;
+  color: white;
+}
+.contact-wrapper>.contact-details>.info-item>span{
+  font-family:poppins;
+  font-size:1rem;
+  font-weight: 300;
+  color: white;
+}
+.contact-wrapper>.contact-details>.info-item>ion-icon{
+  font-family:poppins;
+  font-size:3rem;
+  font-weight: 300;
+  color: white;
+  margin: 12px;
 }
 .contact-form
 .contact-details>h2 {
@@ -641,12 +681,6 @@ nav > ul > li > a:hover {
   font-size: 1.2rem;
 }
 
-.google-map {
-  margin-top: 2rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
 
 .contact-form {
   flex: 1 1 50%;
@@ -838,20 +872,6 @@ nav > ul > li > a:hover {
 }
 
 /* Modal */
-/* Root font scale (optional for responsiveness) */
-html {
-  font-size: 100%;
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 90%;
-  }
-}
-@media (max-width: 480px) {
-  html {
-    font-size: 85%;
-  }
-}
 
 /* Modal backdrop */
 .modal {
@@ -926,11 +946,12 @@ html {
 .row {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 /* Responsive column */
 .form-col {
-  flex: 1 1 100%;
+  flex: 1;
   min-width: 200px;
   padding: 10px;
   display: flex;
@@ -982,4 +1003,13 @@ input::placeholder {
 }
 
 
-
+.form-group-box{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  padding-left: 12px;
+}
+.form-group-box>label{
+  color:black;
+}

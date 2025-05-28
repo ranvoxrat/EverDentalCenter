@@ -20,21 +20,21 @@
             <ion-icon name="menu-outline"></ion-icon>
           </button>
           <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Testimony</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimony">Testimony</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="header-content"  data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-center">
+        <div class="header-content"  id="home" data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center" >
           <div class="header-content-left">
             <h2 class="text-2">Welcome to Ever Dental Center</h2>
             <h1 class="text-1">Your Smile, Our Priority</h1>
@@ -53,7 +53,7 @@
         </div>
       </header>
     </div>
-    <div class="service">
+    <div class="service" id="service">
       <div class="service-header">
         <h2>Our Services</h2>
         <h1>What We Provides</h1>
@@ -190,7 +190,7 @@
       </div>
     </div>
     <div class="contents">
-        <img src="./assets/images/patients.jpg" alt="">
+        <img src="./assets/images/asian-female-dentist-demonstrating-teeth-brushing-technique-patient.jpg" alt="">
         <div class="contents-right">
             <h1>We Care For Your Dental Health</h1>
             <p>We are dedicated to providing exceptional dental care in a comfortable and friendly environment. Our team of experts ensures that every patient receives personalized attention and the best treatment possible.
@@ -198,7 +198,7 @@
             <button class="read-more">Read more</button>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <div class="about-left">
             <h1>About Us</h1>
             <p>Ever Dental Center is committed to delivering top-notch dental care to patients across the country. We take pride in offering high-quality, reliable dental services while making each visit comfortable and stress-free. Our team is known for our compassionate, patient-centered approach—always focused on your individual needs and long-term oral health.</q></p>
@@ -220,20 +220,20 @@
           </div>
         </div>
     </div>   
- <div class="cta-section">
-  <div class="cta-container">
-    <div class="cta-text">
-      <p class="cta-subtitle">Book Dental Appointment Now!</p>
-   <h2 class="cta-title">
-  <span style="font-size: 2rem; color: #ccc;">❝</span>
-  We are open and welcoming patients
-  <span style="font-size: 2rem; color: #ccc;">❞</span>
-</h2>
+      <div class="cta-section">
+        <div class="cta-container">
+          <div class="cta-text">
+            <p class="cta-subtitle">Book Dental Appointment Now!</p>
+        <h2 class="cta-title">
+        <span style="font-size: 2rem; color: #ccc;">❝</span>
+        We are open and welcoming patients
+        <span style="font-size: 2rem; color: #ccc;">❞</span>
+      </h2>
       <a href="#" class="btn-book" id="openModalBtn1"><ion-icon name="calendar-outline"></ion-icon>Book an Appointment</a>
     </div>
   </div>
 </div>
-<div class="blogs">
+<div class="blogs" id="testimony">
   <div class="blogs-header">
     <h2>Our Blogs</h2>
     <h1>Latest Blogs and Events</h1>
@@ -283,7 +283,7 @@
     </div>
   </div>
 </div>
-<section class="contactUs">
+<section class="contactUs" id="contact">
   <div class="contact-wrapper">
     <div class="contact-details">
       <h1>Contact Us</h1>
@@ -302,12 +302,12 @@
         <span>everdentalcenter@gmail.com</span>
       </div> -->
 
-      <div class="google-map">
+      
+    </div>
+<div class="google-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1174.3537439643055!2d120.97905229168038!3d14.679732550928634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b41bba070ae1%3A0x8a14377434c5add0!2s2%20Vicente%20Cordero%20St%2C%20Valenzuela%2C%201440%20Metro%20Manila!5e1!3m2!1sen!2sph!4v1748229041996!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </div>
-
-    <form class="contact-form">
+    <!-- <form class="contact-form">
       <h3>Send us a message</h3>
       <input type="text" placeholder="Full Name" required>
       <input type="email" placeholder="Email Address" required>
@@ -315,7 +315,7 @@
       <textarea placeholder="Your Message" rows="6" required></textarea>
       <button type="submit"><ion-icon name="checkmark-sharp"></ion-icon>
  Send Message</button>
-    </form>
+    </form> -->
 
   </div>
 </section>
@@ -461,6 +461,7 @@
                       </select>
                 </div>
               </div>
+
                <div class="form-group row">
                 <div class="form-col">
                     <label for="service">Service<span class="askterisk">*</span></label>
@@ -482,10 +483,13 @@
                       <option value="0">Others</option>
                     </select>                 
                   </div>
+                </div>
+
                     <div class="form-group-box">
                       <input type="checkbox" id="newPatient" name="new_patient">
                       <label class="form-check-label" for="newPatient">Are you a new patient?</label>
                     </div>
+                    
                     <div class="form-group row" id="referralGroup" style="display: none;">
                       <label for="referralSource">
                         Where did you find out about DGT One Dental Center? <span class="text-danger">*</span>
@@ -502,7 +506,7 @@
                    
 
                   <button type="submit" class="btn-modal-submit"><ion-icon name="checkmark-outline"></ion-icon>Submit</button>
-                  </div>
+                  
                    
             </form>
           </div>
@@ -607,12 +611,8 @@
                         <option>DGT Patient Referral</option>
                       </select>
                     </div>
-
-                   
-
                   <button type="submit" class="btn-modal-submit"><ion-icon name="checkmark-outline"></ion-icon>Submit</button>
-                  </div>
-                   
+                  </div>                  
             </form>
           </div>
         </div>
