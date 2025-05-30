@@ -142,7 +142,7 @@
     flex-direction: column;
     content: "";
     clear: both;
-height: auto;
+    height: auto;
  }
  .about-left{
     position: relative;
@@ -273,15 +273,28 @@ height: auto;
    font-size: 1rem;
    color: rgb(207, 206, 206);
  }
+ .contactUs>.contact-wrapper>.contact-details>.info-item{
+   margin: 0;
+   padding: 0;
+ }
  .contactUs>.contact-wrapper>.contact-details>.info-item>span{
    font-family: poppins;
    font-size: 1rem;
    color: rgb(243, 241, 241);
  }
- .contactUs>.contact-wrapper>.contact-details>.info-item>ion-icon{
-   font-size: 2rem;
-   padding: 8px;
- }
+.contactUs > .contact-wrapper > .contact-details > .info-item > ion-icon {
+  font-size: 2rem;
+  padding: 8px;
+  /* border: solid 2px orange;
+  border-radius: 50%; */
+  width: 2.5rem; /* or another value to suit your design */
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
  .google-map{
    width: 100%;
  }
